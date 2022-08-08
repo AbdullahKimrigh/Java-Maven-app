@@ -47,7 +47,7 @@ pipeline {
                 sh '''
                 mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=$SONAR_PROJECT_NAME \
-                    -Dsonar.host.url=http://$SONAR_IP \
+                    -Dsonar.host.url=http://ec2-35-172-191-120.compute-1.amazonaws.com \
                     -Dsonar.login=$SONAR_TOKEN
                 '''
             }
