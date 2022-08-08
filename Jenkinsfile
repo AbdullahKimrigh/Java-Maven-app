@@ -11,9 +11,9 @@ pipeline {
         AWS_EB_APP_VERSION = "${BUILD_ID}"
         AWS_EB_ENVIRONMENT = "Abdullahkimrighjavamavenapp-env"
         
-        SONAR_PROJECT_NAME = "abdullah-kimrigh-java-maven-app"
+        SONAR_PROJECT_NAME = "online-Abdullah-Kimrigh-B2D2"
         SONAR_IP = "35.172.191.120"
-        SONAR_TOKEN = "sqp_5dee806dc2f00df8c35b66506157423930651a74"
+        SONAR_TOKEN = "sqp_b00d1703c003b6a872448bd62b0ea75c9186f0e6"
     }
 
     stages {
