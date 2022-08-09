@@ -21,14 +21,14 @@ phases:
     on-failure: ABORT
     commands:
     - echo Build start on 'date'
-    - mvn compile
+    - mvn build
     - mvn test
     - echo Build ends on 'date'
   post_build:
     on-failure: ABORT
     commands:
     - echo Build start on 'date'
-    # - mvn clean verify sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_NAME -Dsonar.host.url=http://$SONAR_IP -Dsonar.login=$SONAR_TOKEN
+    - mvn clean verify sonar:sonar -Dsonar.projectKey=$SONAR_PROJECT_NAME -Dsonar.host.url=http://$SONAR_IP -Dsonar.login=$SONAR_TOKEN
     - mvn package
     - mv target/*.jar ROOT.jar
     - echo Build ends on 'date'
